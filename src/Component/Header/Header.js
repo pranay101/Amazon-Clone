@@ -3,8 +3,10 @@ import classes from "./Header.module.css";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import { Link } from "react-router-dom";
+import { useStateValue } from "../ReactContextAPI/StateProvider/StateProvider";
 
 function Header() {
+  const [{ basket, dispatch }] = useStateValue();
   return (
     <div className={classes.header}>
       <Link to="/">
@@ -40,7 +42,7 @@ function Header() {
                 classes.header__optionBasketCount,
               ].join(" ")}
             >
-              0
+              <strong>{basket.length}</strong>
             </span>
           </div>
         </Link>
