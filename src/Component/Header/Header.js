@@ -21,10 +21,12 @@ function Header() {
         <SearchIcon className={classes.header__searchIcon} />
       </div>
       <div className={classes.header__nav}>
-        <div className={classes.header__option}>
-          <span className={classes.header__optionlineone}>Hello guest</span>
-          <span className={classes.header__optionlinetwo}>Sign in</span>
-        </div>
+        <Link to={"/login"}>
+          <div className={classes.header__option}>
+            <span className={classes.header__optionlineone}>Hello guest</span>
+            <span className={classes.header__optionlinetwo}>Sign in</span>
+          </div>
+        </Link>
         <div className={classes.header__option}>
           <span className={classes.header__optionlineone}>Returns</span>
           <span className={classes.header__optionlinetwo}> & orders</span>
@@ -33,7 +35,7 @@ function Header() {
           <span className={classes.header__optionlineone}>Your </span>
           <span className={classes.header__optionlinetwo}>Prime</span>
         </div>
-        <Link to={"checkout"}>
+        <Link to={"/checkout"}>
           <div className={classes.header__optionBasket}>
             <ShoppingBasketIcon />
             <span
