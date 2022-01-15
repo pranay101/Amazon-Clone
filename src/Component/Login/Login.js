@@ -1,18 +1,44 @@
 import React, { useState } from "react";
 import classes from "./Login.module.css";
 import { Link } from "react-router-dom";
+import { auth } from "../../ConfidentialImports/Firebase";
+import { createUserWithEmailAndPassword , signInWithEmailAndPassword } from "firebase/auth";
+import {useNavigate} from "react-router-dom"
 
 function Login() {
+
+  let navigate = useNavigate();
+
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
 
   const signIn = (event) => {
     event.preventDefault();
-    // some fancy firebase login shit
+    signInWithEmailAndPassword(auth,email,password)
+    .then(AuthenticatorResponse => {
+      // successfully logged in user
+      if (AuthenticatorResponse) {
+        navigate("/")
+      }
+    })
+    .catch(error =>{
+      alert(error.message)
+    })
+    
   };
 
   const Register = event =>{
     event.preventDefault();
+    createUserWithEmailAndPassword(auth,email,password)
+    .then(AuthenticatorResponse =>{
+      // successfully created user
+      if (AuthenticatorResponse) {
+        navigate("/")
+      }
+    })
+    .catch(error =>{
+      alert(error.message)
+    })
 
   }
   return (
@@ -32,7 +58,7 @@ function Login() {
             type={"text"}
             value={email}
             onChange={(e) => {
-              setemail(e);
+              setemail(e.target.value);
             }}
           />
 
@@ -41,7 +67,7 @@ function Login() {
             type={"password"}
             value={password}
             onChange={(e) => {
-              setpassword(e);
+              setpassword(e.target.value);
             }}
           />
 
