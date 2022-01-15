@@ -6,7 +6,7 @@ function Subtotal() {
     const [{basket},dispatch] = useStateValue(); 
     const [totalPriceState,settotalPriceState] = useState()
     let totalPrice = 0
-    basket.forEach(item => {
+    basket?.forEach(item => {
         totalPrice = totalPrice + item.price
     });
 
