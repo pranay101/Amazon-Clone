@@ -14,7 +14,6 @@ function App() {
 
   useEffect(() => {
     onAuthStateChanged(auth, (authUser) => {
-      console.log("the user is >>",authUser);
       if (authUser) {
         // do some shit cuz the user is logged i
         dispatch({
@@ -38,9 +37,9 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Routes>
-          <Route path="/checkout" element={[<Header />, <Checkout />]} />
+          <Route path="/checkout" element={[<Header key={1}/>, <Checkout key={3} />]} />
           <Route path="/login" element={<Login />} />
-          <Route path="/" element={[<Header />, <Home />]} />
+          <Route path="/" element={[<Header key={1} />, <Home key={2} />]} />
         </Routes>
       </div>
     </BrowserRouter>

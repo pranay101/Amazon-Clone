@@ -8,8 +8,8 @@ import { auth } from "../../ConfidentialImports/Firebase";
 import {signOut} from "firebase/auth"
 
 function Header() {
-  const [{ basket,user, dispatch }] = useStateValue();
-
+  // const [{ basket},{user}, dispatch ] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
   const handleAuthentication = () =>{
       if (user) {
         signOut(auth);

@@ -6,26 +6,26 @@ function Home() {
   return (
     <div className={classes.home}>
       <div className={classes.home__Container}>
-        <img
-          className={classes.home__Image}
-          src="https://m.media-amazon.com/images/I/71d2wEPbXxL._SX3000_.jpg"
-          alt="Amazon Banner"
-        />
+        <div className={classes.home__imagefade}>
+          <img
+            className={classes.home__Image}
+            src="https://m.media-amazon.com/images/I/71d2wEPbXxL._SX3000_.jpg"
+            alt="Amazon Banner"
+          />
+        </div>
 
         <div className={classes.home__row}>
           <Product
-            id={(Math.floor(Math.random() * 10000) + 10000)
-              .toString()
-              .substring(1)}
+            id={987678}
+            key={987678}
             title=" The Lean Startup: How Constant Innovation Creates Radically Successful Businesses"
             price={640}
             rating={5}
             image="https://images-eu.ssl-images-amazon.com/images/I/51T-sMqSMiL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg"
           />
           <Product
-            id={(Math.floor(Math.random() * 10000) + 10000)
-              .toString()
-              .substring(1)}
+            id={4568790}
+            key={4568790}
             title="Pidilite D-Klog Drain Cleaner Powder (40g x 5N), Removes Clogs, Blockages in Washbasin, Sinks, Pipes within 30 Minutes, No Manual Hassle with Drain spring pipe, Plunger, Drain Stick, Cleaning Hook"
             price={100}
             rating={4}
@@ -34,9 +34,8 @@ function Home() {
         </div>
         <div className={classes.home__row}>
           <Product
-            id={(Math.floor(Math.random() * 10000) + 10000)
-              .toString()
-              .substring(1)}
+            id={56789}
+            key={56789}
             title="Fitbit Charge 4 Fitness and Activity Tracker with Built-in GPS, Heart Rate, Sleep & Swim Tracking, One Size (S & L Bands Included) (Black)"
             price={7999}
             rating={5}
@@ -52,9 +51,8 @@ function Home() {
             image="https://m.media-amazon.com/images/I/61EXU8BuGZL._AC_UY218_.jpg"
           />
           <Product
-            id={(Math.floor(Math.random() * 10000) + 10000)
-              .toString()
-              .substring(1)}
+            id={98765}
+            key={98765}
             title="2021 Apple iPad Pro with Apple M1 chip (12.9-inch/32.77 cm, Wi-Fi, 256GB) - Space Grey (5th Generation)"
             price={104599}
             rating={5}
@@ -63,9 +61,8 @@ function Home() {
         </div>
         <div className={classes.home__row}>
           <Product
-            id={(Math.floor(Math.random() * 10000) + 10000)
-              .toString()
-              .substring(1)}
+            id={456543}
+            key={456543}
             title="Samsung LC34J791WTWXXL 34' Wide ScreenThunderbolt 3 Curved Monitor 3440 x 1440"
             price={80000}
             rating={4}

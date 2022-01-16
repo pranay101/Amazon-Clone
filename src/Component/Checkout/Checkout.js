@@ -19,6 +19,7 @@ function Checkout() {
             return (
               <CheckoutProduct
                 id={item.id}
+                key={item.id}
                 title={item.title}
                 image={item.image}
                 rating={item.rating}

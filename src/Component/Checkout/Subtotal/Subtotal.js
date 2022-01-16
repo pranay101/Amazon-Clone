@@ -5,14 +5,14 @@ function Subtotal() {
 
     const [{basket},dispatch] = useStateValue(); 
     const [totalPriceState,settotalPriceState] = useState()
-    let totalPrice = 0
+    let totalPrice = 0;
     basket?.forEach(item => {
         totalPrice = totalPrice + item.price
     });
 
     return (
         <div className={classes.subtotal}>
-            <p>Subtotal ({basket.length} items) : 
+            <p>Subtotal ({basket?.length} items) : 
             <strong> ₹ {totalPrice}</strong></p>
             <small className={classes.subtotal__gift}>
                 <input type={"checkbox"} />
