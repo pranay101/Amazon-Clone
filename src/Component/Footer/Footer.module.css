@@ -1,0 +1,96 @@
+.Footer {
+  margin-top: 150px;
+}
+
+.Footer__links {
+  background-color: #232f3e;
+  display: flex;
+  justify-content: space-evenly;
+  height: auto;
+  flex: 1;
+  border-bottom: 1px solid lightgrey;
+}
+
+.Footer__section {
+  margin: 20px 15px;
+  padding: 40px;
+  text-align: left;
+}
+
+.Footer__section > h3 {
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.Footer__section > p {
+  list-style-type: none;
+  color: #ddd;
+  font-size: 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.Footer_backtotop {
+  width: 100%;
+  height: 50px;
+  background-color: #37475a;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+
+.Footer_backtotop :hover {
+  background-color: #46505c;
+}
+
+.Footer_backtotop > p {
+  color: #ddd;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Footer__countries {
+  height: 150px;
+  width: 100%;
+  background-color: #232f3e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Footer__countries > img {
+  width: 100px;
+  object-fit: contain;
+}
+
+.Footer__countrylist {
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.Footer__countrylist ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  text-decoration: none;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.Footer__countrylist ul li {
+  margin: auto 5px;
+}
+
+.Footer__countrylist ul li a {
+  color: #ddd;
+  text-decoration: none;
+}

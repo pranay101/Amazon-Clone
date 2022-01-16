@@ -3,6 +3,7 @@ import classes from "./Product.module.css";
 import {useStateValue} from "../../ReactContextAPI/StateProvider/StateProvider";
 
 function Product({ id, title, price, image, rating }) {
+
   const [{ basket }, dispatch] = useStateValue();
 
   const addToBasket = () => {

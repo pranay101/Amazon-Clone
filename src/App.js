@@ -8,6 +8,7 @@ import Login from "./Component/Login/Login";
 import { auth } from "./ConfidentialImports/Firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { useStateValue } from "./Component/ReactContextAPI/StateProvider/StateProvider";
+import Footer from "./Component/Footer/Footer"
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -39,7 +40,7 @@ function App() {
         <Routes>
           <Route path="/checkout" element={[<Header key={1}/>, <Checkout key={3} />]} />
           <Route path="/login" element={<Login />} />
-          <Route path="/" element={[<Header key={1} />, <Home key={2} />]} />
+          <Route path="/" element={[<Header key={1} />, <Home key={2}/>,<Footer />]} />
         </Routes>
       </div>
     </BrowserRouter>
