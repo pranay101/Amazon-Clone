@@ -9,6 +9,7 @@ import { auth } from "./ConfidentialImports/Firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { useStateValue } from "./Component/ReactContextAPI/StateProvider/StateProvider";
 import Footer from "./Component/Footer/Footer"
+import Payment from "./Component/Payment/Payment";
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -39,6 +40,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/checkout" element={[<Header key={1}/>, <Checkout key={3} />]} />
+          <Route path="/payment" element={[<Header key={1}/>, <Payment />]} />
           <Route path="/login" element={<Login />} />
           <Route path="/" element={[<Header key={1} />, <Home key={2}/>,<Footer />]} />
         </Routes>

@@ -1,10 +1,13 @@
-import React,{useState} from 'react'
+import React from 'react'
 import classes from "./Subtotal.module.css"
 import { useStateValue } from '../../ReactContextAPI/StateProvider/StateProvider'
-function Subtotal() {
+import {useNavigate} from "react-router-dom"
 
-    const [{basket},dispatch] = useStateValue(); 
-    const [totalPriceState,settotalPriceState] = useState()
+
+
+function Subtotal() {
+    const navigate = useNavigate()
+    const [{basket},] = useStateValue(); 
     let totalPrice = 0;
     basket?.forEach(item => {
         totalPrice = totalPrice + item.price
@@ -18,7 +21,7 @@ function Subtotal() {
                 <input type={"checkbox"} />
                 This Order Contains a gift.
             </small>
-            <button>Proceed to Checkout</button>
+            <button onClick={e => {navigate("/payment")}}>Proceed to Checkout</button>
         </div>
     )
 }

@@ -1,17 +1,25 @@
 .checkout {
   display: flex;
-  background-color: white;
+  background-color: rgb(234, 237, 237);
   padding: 20px;
   max-height: max-content;
+  justify-content: space-between;
 }
 
 .checkout__ad {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .checkout__title {
   margin-right: 10px;
   padding: 10px;
   border-bottom: 1px solid lightgray;
+}
+
+.checkout__user {
+  margin-right: 10px;
+  padding: 10px;
+  font-weight: normal;
 }
